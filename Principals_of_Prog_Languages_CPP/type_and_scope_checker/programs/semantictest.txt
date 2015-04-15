@@ -1,0 +1,31 @@
+{
+   int a ;
+   bool b ;
+   bool [ 7 ] bArr ;
+   bool [ -6 ] negArray ; //negative array error
+   int [ 2 ] [ 6 ] multiArr ;
+   int [ 2 ] [ -6 ] badNegArray ; //negative array error
+   double d ;
+   
+   multiArr = 6 ; //type mismatch, cannot assign to type array [][]
+   multiArr [ 2 ] = 6 ; //type mismatch, cannot assign to type array []
+   multiArr [ 2 ] [ 2 ] = 8 ;
+   
+   a = 3 + b ; //operator + expects numerical expression (b is bool)
+   b = c + a ; //expects 2 matching ints, c undeclared
+   bArr [ 3 + 2 ] = true && ( b || 3 > a ) && b > 7 ; //b > 7 is no good
+   d = 7 ; //d expects a REAL
+  
+   if ( d ) { //d is not a bool
+    int d ; //this is fine
+    bool d ; //this is a problem
+   }
+   else {
+    int e ;
+    int d ;
+    d = 7.0 + d ; // the d in this scope is an int
+    if ( b > false && 2 < ( 26 * a ) || 4.0 != - 3.4 ) //this is fine because we allow bool to be compared
+    b = true ;
+   }
+   e = 7 ; //this is no longer in scope
+}

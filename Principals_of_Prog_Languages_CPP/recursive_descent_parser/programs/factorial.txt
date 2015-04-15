@@ -1,0 +1,14 @@
+{ 
+    int N ;
+    int product ;
+    int j ;
+    int output ;
+    product = 1 ;
+    j = 1 ;
+
+    while ( j <= N ) {
+       product = product * j ;
+       j = j + 1 ;
+    }
+    output = product ;
+} 

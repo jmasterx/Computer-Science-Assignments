@@ -1,0 +1,33 @@
+{
+   int [ 4 ] values ;
+   int listlen ;
+   bool swapped ;
+   bool firstIter ;
+   int temp ;
+   int i ;
+
+   listlen = 4 ;
+   values [ 0 ] = 4 ;
+   values [ 1 ] = 2 ;
+   values [ 2 ] = 3 ;
+   values [ 3 ] = 1 ;
+   i = 0 ;
+   swapped = false ;
+   firstIter = true ;
+   
+   while ( firstIter == true || swapped != false ) {
+      firstIter = false ;
+      i = 0 ;
+      swapped = false ;
+      
+      while ( i < listlen - 1 ) {
+         if ( values [ i ] > values [ i - 1 ] ) {
+            temp = values [ i ] ;
+            values [ i ] = values [ i + 1 ] ;
+            values [ i + 1 ] = temp ;
+            swapped = true ;
+         }
+         i = i + 1 ;
+      }
+   }  
+}

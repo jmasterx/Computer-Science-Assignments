@@ -1,0 +1,20 @@
+{
+   int a ;
+   int [ 2 ] b ;
+   char [ 56 ] c ;
+   bool d ;
+   double e ;
+   
+   a = ( 8 * b + ( 32 / c ) - -32 * e ) ;
+   b [ ( 2 * d ) + 3 * -7.0 ] = 1 ;
+   
+   if ( a == ( 12 || d >= 7 * ( 22 || true || false && a > 0 ) ) && a != b && ( c || b ) ) {
+   }
+   else {
+   b [ 1 ] = 12 + 7 ;
+   while ( d > 7 && ( d <= 3 && d < 3 && d <= false ) ) {
+         if ( true && false && a > 9 )
+            a = 3 - -7 ;
+      }
+   } 
+}
